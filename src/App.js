@@ -6,10 +6,10 @@ import ExtraInstructions from './ExtraInstructions.js';
 import ExtraInstructionsDisplay from './ExtraInstructionsDisplay.js';
 import FoodDropdown from './FoodDropdown.js';
 import SideDropdown from './SideDropdown.js';
-// import DrinkDropdown from './DrinkDropdown.js';
+import DrinkDropdown from './DrinkDropdown.js';
 import FoodImageDisplay from './FoodImageDisplay.js';
 import SideImageDisplay from './SideImageDisplay.js';
-// import DrinkImageDisplay from './DrinkImageDisplay.js';
+import DrinkImageDisplay from './DrinkImageDisplay.js';
 import { useState } from 'react';
 
 
@@ -28,7 +28,7 @@ function App() {
         <div id="dropdowns">
           <FoodDropdown setFoodSelection={ setFoodSelection } />
           <SideDropdown setSideSelection={ setSideSelection } />
-          {/* <DrinkDropdown /> */}
+          <DrinkDropdown setDrinkSelection={ setDrinkSelection }/>
         </div>
         <ExtraInstructions instructions={ instructions } setInstructions={ setInstructions } setInstructionsDisplay={ setInstructionsDisplay } />
       </section>
@@ -37,7 +37,7 @@ function App() {
         <div id="image-display-area">
           <FoodImageDisplay foodSelection={ foodSelection } />
           <SideImageDisplay sideSelection={ sideSelection } />
-          {/* <DrinkImageDisplay /> */}
+          <DrinkImageDisplay drinkSelection={ drinkSelection } />
         </div>
         <ExtraInstructionsDisplay instructionsDisplay={ instructionsDisplay } />
       </section>
