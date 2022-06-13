@@ -1,6 +1,6 @@
 export default function OrderDisplay({ orderInput }) {
   return (
-    <div>
+    <div id="order-name-display">
       {orderInput}
     </div>
   );
