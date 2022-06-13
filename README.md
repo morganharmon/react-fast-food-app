@@ -2,6 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+<img src="./public/fast-food-app.jpg" height="600px">
+
+
+
+
 Use this template for all your "from scratch" deliverables. To start, simply run
 
 - `npm install`

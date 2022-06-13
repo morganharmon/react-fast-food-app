@@ -1,23 +1,45 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import OrderInput from 'OrderInput.js';
+import FoodDropdown from 'FoodDropdown.js';
+import SideDropdown from 'SideDropdown.js';
+import DrinkDropdown from 'DrinkDropdown.js';
+import ExtraInstructions from 'ExtraInstructions.js';
+import OrderDisplay from 'OrderDisplay.js';
+import FoodImageDisplay from 'FoodImageDisplay.js';
+import SideImageDisplay from 'SideImageDisplay.js';
+import DrinkImageDisplay from 'DrinkImageDisplay.js';
+import ExtraInstructionsDisplay from 'ExtraInstructionsDiplsay.js';
+import { useState } from 'react';
+
 
 function App() {
+  const [orderInput, setOrderInput] = useState('');
+  const [foodSelection, setFoodSelection] = useState(1);
+  const [sideSelection, setSideSelection] = useState(1);
+  const [drinkSelection, setDrinkSelection] = useState(1);
+  const [instructions, setInstructions] = useState('');
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <section id="input-area">
+        <OrderInput />
+        <div id="dropdowns">
+          <FoodDropdown />
+          <SideDropdown />
+          <DrinkDropdown />
+        </div>
+        <ExtraInstructions />
+      </section>
+      <section id="display-area">
+        <OrderDisplay />
+        <div id="image-display-area">
+          <FoodImageDisplay />
+          <SideImageDisplay />
+          <DrinkImageDisplay />
+        </div>
+        <ExtraInstructionsDisplay />
+      </section>
     </div>
   );
 }
