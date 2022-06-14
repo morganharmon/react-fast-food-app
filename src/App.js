@@ -21,6 +21,7 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setInstructionsDisplay([...instructionsDisplay, 'Extra instructions: ' + instructions]);
+    setInstructions('');
   };
   return (
     <div className="App">
