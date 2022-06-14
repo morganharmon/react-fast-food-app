@@ -1,8 +1,4 @@
-export default function ExtraInstructions({ instructions, setInstructions, setInstructionsDisplay }) {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setInstructionsDisplay('Extra instructions: ' + instructions);
-  };
+export default function ExtraInstructions({ handleSubmit, instructions, setInstructions }) {
   return (
     <div id="extra-instructions-input-area">
       <form id="extra-instructions-form" onSubmit={handleSubmit}>

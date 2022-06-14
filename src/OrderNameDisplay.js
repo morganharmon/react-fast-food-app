@@ -1,4 +1,4 @@
-export default function OrderDisplay({ orderInput }) {
+export default function OrderNameDisplay({ orderInput }) {
   return (
     <div id="order-name-display">
       {orderInput}

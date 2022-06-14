@@ -1,15 +1,13 @@
 import './App.css';
 import React from 'react';
 import OrderInput from './OrderInput.js';
-import OrderDisplay from './OrderDisplay.js';
+import OrderNameDisplay from './OrderNameDisplay.js';
 import ExtraInstructions from './ExtraInstructions.js';
 import ExtraInstructionsDisplay from './ExtraInstructionsDisplay.js';
 import FoodDropdown from './FoodDropdown.js';
 import SideDropdown from './SideDropdown.js';
 import DrinkDropdown from './DrinkDropdown.js';
-import FoodImageDisplay from './FoodImageDisplay.js';
-import SideImageDisplay from './SideImageDisplay.js';
-import DrinkImageDisplay from './DrinkImageDisplay.js';
+import ImageDisplay from './ImageDisplay.js';
 import { useState } from 'react';
 
 
@@ -19,8 +17,11 @@ function App() {
   const [sideSelection, setSideSelection] = useState('Fries');
   const [drinkSelection, setDrinkSelection] = useState('Soda');
   const [instructions, setInstructions] = useState('');
-  const [instructionsDisplay, setInstructionsDisplay] = useState('');
-
+  const [instructionsDisplay, setInstructionsDisplay] = useState(['']);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setInstructionsDisplay([...instructionsDisplay, 'Extra instructions: ' + instructions]);
+  };
   return (
     <div className="App">
       <section id="input-area">
@@ -33,16 +34,14 @@ function App() {
         </div>
         <div id="instructions">
           <label id="instructions-label">Enter any extra instructions: </label>
-          <ExtraInstructions instructions={ instructions } setInstructions={ setInstructions } setInstructionsDisplay={ setInstructionsDisplay } />
+          <ExtraInstructions handleSubmit={ handleSubmit } instructions={ instructions } setInstructions={ setInstructions } />
         </div>
       </section>
       <hr></hr>
       <section id="display-area">
-        <OrderDisplay orderInput={ orderInput } />
+        <OrderNameDisplay orderInput={ orderInput } />
         <div id="image-display-area">
-          <FoodImageDisplay foodSelection={ foodSelection } />
-          <SideImageDisplay sideSelection={ sideSelection } />
-          <DrinkImageDisplay drinkSelection={ drinkSelection } />
+          <ImageDisplay foodSelection={ foodSelection } sideSelection={ sideSelection } drinkSelection={ drinkSelection } />
         </div>
         <ExtraInstructionsDisplay instructionsDisplay={ instructionsDisplay } />
       </section>

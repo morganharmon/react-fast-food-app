@@ -100,6 +100,6 @@ img {
   margin: 20px;
 }
 
-/* div {
-  border: solid blue 2px;
-} */
+#images-container {
+  display: flex;
+}
