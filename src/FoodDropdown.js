@@ -1,10 +1,10 @@
 export default function FoodDropdown({ setFoodSelection }) {
   return (
-    <div id="food-dropdown-area">
-      <select id="food-dropdown" onChange={(e) => setFoodSelection(e.target.value)}>
+    <div className="item-dropdown-area">
+      <select className="dropdown" onChange={(e) => setFoodSelection(e.target.value)}>
         <option value={'Burger'}>Burger</option>
-        <option value={'Chicken'}>Chicken</option>
-        <option value={'Fish'}>Fish</option>
+        <option value={'Chicken'}>Chicken Sandwich</option>
+        <option value={'Fish'}>Fish Sandwich</option>
       </select>
     </div>
   );

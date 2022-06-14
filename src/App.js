@@ -26,12 +26,17 @@ function App() {
       <section id="input-area">
         <OrderInput orderInput={ orderInput } setOrderInput={ setOrderInput } />
         <div id="dropdowns">
+          <label>Choose your items: </label>
           <FoodDropdown setFoodSelection={ setFoodSelection } />
           <SideDropdown setSideSelection={ setSideSelection } />
           <DrinkDropdown setDrinkSelection={ setDrinkSelection }/>
         </div>
-        <ExtraInstructions instructions={ instructions } setInstructions={ setInstructions } setInstructionsDisplay={ setInstructionsDisplay } />
+        <div id="instructions">
+          <label id="instructions-label">Enter any extra instructions: </label>
+          <ExtraInstructions instructions={ instructions } setInstructions={ setInstructions } setInstructionsDisplay={ setInstructionsDisplay } />
+        </div>
       </section>
+      <hr></hr>
       <section id="display-area">
         <OrderDisplay orderInput={ orderInput } />
         <div id="image-display-area">

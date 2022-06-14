@@ -1,6 +1,6 @@
 export default function FoodImageDisplay({ foodSelection }) {
   return (
-    <div>
+    <div id="food-div">
       <img src={`/${foodSelection}.jpg`} />
     </div>
   );

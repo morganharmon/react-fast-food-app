@@ -36,3 +36,70 @@
     transform: rotate(360deg);
   }
 }
+
+img {
+  width: auto;
+  height: 250px;
+}
+
+#image-display-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#food-div {
+  width: fit-content;
+}
+
+#dropdowns {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin: 20px;
+}
+
+.item-dropdown-area {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.dropdown {
+  width: fit-content;
+}
+
+#instructions {
+  display: flex;
+  margin: 20px;
+}
+
+#extra-instructions-input-area {
+  margin: 20px;
+}
+
+#extra-instructions-input {
+  margin: 10px;
+}
+
+#button {
+  align-self: center;
+}
+
+#extra-instructions-form {
+  display: flex;
+}
+
+#instructions-label {
+  display: flex;
+  align-items: center;
+}
+
+#order-name-display {
+  margin: 20px;
+}
+
+/* div {
+  border: solid blue 2px;
+} */
